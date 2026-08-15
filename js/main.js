@@ -1,4 +1,4 @@
-// La Clef Provençale — comportements communs à toutes les pages
+// Passala Conciergerie — comportements communs à toutes les pages
 
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.getElementById('nav-toggle');
