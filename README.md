@@ -1,6 +1,6 @@
-# La Clef Provençale — Site vitrine conciergerie
+# Passala Conciergerie — Site vitrine conciergerie
 
-Site vitrine multi-pages pour **La Clef Provençale**, conciergerie haut de gamme dédiée à la gestion de maisons et villas en Provence. Le site est pensé en priorité pour convaincre les **propriétaires de maisons/villas** de confier leur bien à la conciergerie.
+Site vitrine multi-pages pour **Passala Conciergerie**, conciergerie haut de gamme dédiée à la gestion de maisons et villas en Provence. Le site est pensé en priorité pour convaincre les **propriétaires de maisons/villas** de confier leur bien à la conciergerie.
 
 ## 🎯 Objectif principal
 La page d'accueil est construite comme un tunnel de conversion complet :
@@ -21,7 +21,7 @@ La page d'accueil est construite comme un tunnel de conversion complet :
 - **À propos (`a-propos.html`)** — présentation de la fondatrice (Camille Servan), valeurs de l'entreprise, timeline du parcours. **Contenu à valider/corriger avec les vraies informations.**
 - **Contact (`contact.html`)** — formulaire complet (nom, téléphone, email, type de bien, ville, statut location saisonnière, message, consentement RGPD) qui :
   - enregistre chaque demande dans la table `leads` (consultable à tout moment) ;
-  - propose un lien `mailto:` pré-rempli en secours vers `contact@laclefprovencale.fr`.
+  - propose un lien `mailto:` pré-rempli en secours vers `contact@passala-conciergerie.fr`.
 - Header/footer cohérents sur toutes les pages, menu entièrement responsive (menu plein écran centré sur mobile, sans bug d'affichage).
 - **Design épuré mais flashy et vivant « PACA »** : palette multicolore inspirée du Sud (ocre/terracotta du Luberon, turquoise méditerranéen, jaune tournesol, lavande, rose bougainvillier), boutons en dégradé, bordures et icônes colorées par carte, typographie Playfair Display + Jost.
 - **Photos intégrées dans toutes les zones auparavant « texte seul »** : chaque carte « problématique » / « bénéfice » a sa photo, bandes photo panoramiques (mosaïque 4 images) sur l'accueil et la page Nos biens, blocs image/texte côte à côte sur Partenaires et À propos — pour un ratio image/texte équilibré, sur desktop comme sur mobile.
@@ -55,7 +55,7 @@ Un site 100% statique ne peut **pas** appeler l'API Resend directement depuis le
 ### Table `partners` (les partenaires)
 `id`, `name`, `category`, `description`, `website`
 
-6 partenaires placeholder en base, à remplacer/compléter avec les vrais partenaires de La Clef Provençale.
+6 partenaires placeholder en base, à remplacer/compléter avec les vrais partenaires de Passala Conciergerie.
 
 ### Table `leads` (les demandes de contact)
 `id`, `full_name`, `email`, `phone`, `property_type`, `city`, `already_rented`, `message`, `consent`, `status`
@@ -67,8 +67,22 @@ Chaque soumission du formulaire de contact crée une ligne ici. Le champ `status
 - **Envoi d'email automatique instantané** (nécessite un service tiers type EmailJS, voir plus haut).
 - **Interface d'administration** pour consulter/traiter les leads directement depuis le site (actuellement consultation via la table `leads`).
 - **Vraies photos** des biens, du portrait de la fondatrice, et **vrai contenu** des pages Partenaires / À propos (actuellement meublés avec du contenu crédible mais fictif, comme convenu).
-- **Email de contact** (`contact@laclefprovencale.fr` est un exemple à remplacer par le vrai email). Le téléphone `07 44 89 66 02` est le vrai numéro, déjà intégré partout sur le site.
+- **Email de contact** (`contact@passala-conciergerie.fr` est un exemple, calé sur le nouveau nom, à remplacer par le vrai email). Le téléphone `07 44 89 66 02` est le vrai numéro, déjà intégré partout sur le site.
 - Pages légales complètes (mentions légales, politique de confidentialité RGPD détaillée) — seule une mention de consentement basique est présente sur le formulaire.
+
+## 🔑 Identité visuelle & logo
+
+Le logo officiel **Passala Conciergerie** (clef dorée, olivier et lavande sur fond bleu nuit) est décliné en plusieurs fichiers, tous générés à partir du fichier source fourni :
+
+| Fichier | Usage |
+|---|---|
+| `images/logo-passala-lockup.jpg` | Logo du header (clef + PASSALA + CONCIERGERIE), affiché en 64 px de haut |
+| `images/logo-passala.jpg` | Logo complet avec les rameaux, utilisé dans le footer |
+| `images/logo-passala-emblem.png` | Emblème carré (la clef seule), 512 px — icône haute définition |
+| `images/apple-touch-icon.png` | Icône 180 px pour iOS / ajout à l'écran d'accueil |
+| `images/favicon-32.png`, `images/favicon-16.png`, `favicon.ico` | Favicons de l'onglet navigateur |
+
+Les balises `<link rel="icon">`, `<link rel="apple-touch-icon">` et `<meta name="theme-color" content="#0a1e37">` sont présentes sur les six pages du site.
 
 ## 🎨 Palette de couleurs "PACA flashy"
 

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   La Clef Provençale — Feuille de style principale
+   Passala Conciergerie — Feuille de style principale
    Charte : élégance provençale contemporaine
    ========================================================================== */
 
@@ -143,32 +143,19 @@ section { padding: 90px 0; }
   margin: 0 auto;
 }
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--color-ink);
+  flex-shrink: 0;
 }
-.brand-mark {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-terracotta), var(--color-gold));
-  color: var(--color-white);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-}
-.brand small {
+.brand img {
   display: block;
-  font-family: var(--font-sans);
-  font-size: 0.62rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-turquoise-dark);
-  font-weight: 500;
+  height: 64px;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(26, 43, 60, 0.18);
 }
+@media (max-width: 900px) { .brand img { height: 50px; border-radius: 8px; } }
+@media (max-width: 420px) { .brand img { height: 42px; } }
 #main-nav { display: flex; align-items: center; gap: 36px; }
 #main-nav a:not(.btn) {
   font-size: 0.95rem;
@@ -263,8 +250,9 @@ section { padding: 90px 0; }
 }
 @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 #site-footer h4 { color: var(--color-white); font-family: var(--font-sans); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 18px; }
-#site-footer .brand { color: var(--color-white); margin-bottom: 14px; }
-#site-footer .brand-mark { background: linear-gradient(135deg, var(--color-terracotta), var(--color-gold)); }
+#site-footer .brand { display: block; margin-bottom: 18px; }
+#site-footer .brand img { height: auto; width: 210px; max-width: 100%; border-radius: 12px; box-shadow: none; }
+@media (max-width: 800px) { #site-footer .brand img { width: 180px; } }
 #site-footer p, #site-footer a { color: #94aab8; font-size: 0.95rem; }
 #site-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
 #site-footer a:hover { color: var(--color-white); }

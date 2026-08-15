@@ -1,4 +1,4 @@
-// La Clef Provençale — gestion du formulaire de contact
+// Passala Conciergerie — gestion du formulaire de contact
 // Enregistre la demande dans la table "leads" (base du site) et propose
 // un envoi mail direct (mailto) en secours, l'envoi automatique via Resend
 // n'étant pas réalisable depuis un site 100% statique côté navigateur.
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
       form.reset();
     } catch (err) {
       console.error(err);
-      showFeedback('error', 'Une erreur est survenue lors de l\'envoi. Merci de réessayer, ou de nous écrire directement à contact@laclefprovencale.fr.');
+      showFeedback('error', 'Une erreur est survenue lors de l\'envoi. Merci de réessayer, ou de nous écrire directement à contact@passala-conciergerie.fr.');
       addMailtoFallback(data);
     } finally {
       submitBtn.disabled = false;
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'Déjà loué en saisonnier : ' + data.already_rented + '\n\n' +
       'Message :\n' + (data.message || '(aucun message)')
     );
-    const mailtoLink = 'mailto:contact@laclefprovencale.fr?subject=' + subject + '&body=' + body;
+    const mailtoLink = 'mailto:contact@passala-conciergerie.fr?subject=' + subject + '&body=' + body;
     const existing = document.getElementById('mailto-fallback');
     if (existing) existing.remove();
     const link = document.createElement('a');

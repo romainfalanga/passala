@@ -1,4 +1,4 @@
-// La Clef Provençale — chargement dynamique des biens depuis la Table API
+// Passala Conciergerie — chargement dynamique des biens depuis la Table API
 
 const AMENITY_ICONS = {
   "Piscine à débordement": "fa-water-ladder",
@@ -112,7 +112,7 @@ async function renderPropertyDetail() {
       root.innerHTML = '<div class="container text-center" style="padding:120px 0;"><h2>Ce bien n\'est plus disponible</h2><a href="nos-biens.html" class="btn btn-primary">Voir tous nos biens</a></div>';
       return;
     }
-    document.title = p.name + ' — ' + p.location + ' | La Clef Provençale';
+    document.title = p.name + ' — ' + p.location + ' | Passala Conciergerie';
 
     const amenities = (p.amenities || []).map(a => `<li><i class="fa-solid ${amenityIcon(a)}"></i> ${a}</li>`).join('');
 
